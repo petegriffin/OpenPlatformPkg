@@ -826,6 +826,8 @@ HiKeyOnEndOfDxe (
       mBootIndex = HIKEY_BOOT_ENTRY_FASTBOOT;
   }
 
+  HiKeyIsJumperConnected ();
+
   Status = HiKeyCreateBootNext ();
   if (EFI_ERROR (Status)) {
     DEBUG ((EFI_D_ERROR, "%a: failed to set BootNext variable\n", __func__));
