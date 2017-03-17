@@ -820,7 +820,6 @@ HiKeyOnEndOfDxe (
   }
 
   if (HiKeyGetUsbMode () == USB_DEVICE_MODE) {
-    if (HiKeyIsJumperConnected () == TRUE)
       mBootIndex = HIKEY_BOOT_ENTRY_FASTBOOT;
     /* Set mBootIndex as HIKEY_BOOT_ENTRY_FASTBOOT if adb reboot-bootloader is specified */
     if (HiKeyDetectRebootReason () == TRUE)
